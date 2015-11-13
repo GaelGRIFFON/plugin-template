@@ -2,8 +2,8 @@
 if (!isConnect('admin')) {
     throw new Exception('{{401 - Accès non autorisé}}');
 }
-sendVarToJS('eqType', 'template');
-$eqLogics = eqLogic::byType('template');
+sendVarToJS('eqType', '#plugin_id#');
+$eqLogics = eqLogic::byType('#plugin_id#');
 ?>
 
 <div class="row row-overflow">
@@ -11,7 +11,7 @@ $eqLogics = eqLogic::byType('template');
         <div class="bs-sidebar">
             <ul id="ul_eqLogic" class="nav nav-list bs-sidenav">
                 <a class="btn btn-default eqLogicAction" style="width : 100%;margin-top : 5px;margin-bottom: 5px;" data-action="add">
-                    <i class="fa fa-plus-circle"></i> {{Ajouter un template}} <!-- changer pour votre type d'équipement -->
+                    <i class="fa fa-plus-circle"></i> {{Ajouter un #plugin_name#}}
                 </a>
                 <li class="filter" style="margin-bottom: 5px;"><input class="filter form-control input-sm" placeholder="{{Rechercher}}" style="width: 100%"/></li>
             </ul>
@@ -20,7 +20,7 @@ $eqLogics = eqLogic::byType('template');
     </div>
 
     <div class="col-lg-10 col-md-9 col-sm-8 eqLogicThumbnailDisplay" style="border-left: solid 1px #EEE; padding-left: 25px;">
-        <legend>{{Mes templates}}</legend> <!-- changer pour votre type d'équipement -->
+        <legend>{{Mes #plugin_name#}}</legend> <!-- changer pour votre type d'équipement -->
 
         <div class="eqLogicThumbnailContainer"></div> <!-- le container -->
     </div>
@@ -35,10 +35,10 @@ $eqLogics = eqLogic::byType('template');
                     <i class='fa fa-cogs eqLogicAction pull-right cursor expertModeVisible' data-action='configure'></i>
                 </legend>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">{{Nom de l'équipement template}}</label>
+                    <label class="col-sm-3 control-label">{{Nom de l'équipement #plugin_name#}}</label>
                     <div class="col-sm-3">
                         <input type="text" class="eqLogicAttr form-control" data-l1key="id" style="display : none;" />
-                        <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement template}}"/>
+                        <input type="text" class="eqLogicAttr form-control" data-l1key="name" placeholder="{{Nom de l'équipement #plugin_name#}}"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -65,7 +65,7 @@ $eqLogics = eqLogic::byType('template');
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">{{template param 1}}</label>
+                    <label class="col-sm-3 control-label">{{tparam 1}}</label>
                     <div class="col-sm-3">
                         <input type="text" class="eqLogicAttr configuration form-control" data-l1key="configuration" data-l2key="city" placeholder="param1"/>
                     </div>
@@ -73,7 +73,7 @@ $eqLogics = eqLogic::byType('template');
             </fieldset>
         </form>
 
-        <legend>{{Template}}</legend>
+        <legend>{{#plugin_name#}}</legend>
         <table id="table_cmd" class="table table-bordered table-condensed">
             <thead>
                 <tr>
@@ -96,5 +96,5 @@ $eqLogics = eqLogic::byType('template');
     </div>
 </div>
 
-<?php include_file('desktop', 'template', 'js', 'template'); ?>
+<?php include_file('desktop', '#plugin_id#', 'js', '#plugin_id#'); ?>
 <?php include_file('core', 'plugin.ajax', 'js'); ?>
