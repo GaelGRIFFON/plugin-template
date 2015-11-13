@@ -25,7 +25,7 @@ try {
     }
     // action qui permet d'obtenir l'ensemble des eqLogic
     if (init('action') == 'getAll') {
-        $eqLogics = eqLogic::byType('template'); // ne pas oublier de modifier pour le nom de votre plugin
+        $eqLogics = eqLogic::byType('#plugin_id#');
         // la liste des équipements
         foreach ($eqLogics as $eqLogic) {
             $data['id'] = $eqLogic->getId();
@@ -38,7 +38,7 @@ try {
     // action qui permet d'effectuer la sauvegarde des donéée en asynchrone
     if (init('action') == 'saveStack') {
         $params = init('params');
-        ajax::success(template::saveStack($params)); // ne pas oublier de modifier pour le nom de votre plugin
+        ajax::success(#plugin_id#::saveStack($params));
     }
 
     throw new Exception(__('Aucune methode correspondante à : ', __FILE__) . init('action'));
