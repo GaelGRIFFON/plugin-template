@@ -22,6 +22,7 @@ if (!isConnect()) {
     die();
 }
 ?>
+<!--------------------- EXEMPLE DE PAGE DE CONFIGURATION ------------------------------
 <form class="form-horizontal">
     <fieldset>
         <div class="form-group">
@@ -76,4 +77,6 @@ if (!isConnect()) {
     });
 });
 </script>
+
+--------------------- EXEMPLE DE PAGE DE CONFIGURATION ------------------------------>
 
