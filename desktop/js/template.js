@@ -72,7 +72,7 @@ function displayEqLogic(_data) {
 function updateDisplayPlugin(_callback) {
     $.ajax({
         type: "POST",
-        url: "plugins/template/core/ajax/template.ajax.php", // ne pas oublier de modifier pour le nom de votre plugin
+        url: "plugins/#plugin_id#/core/ajax/#plugin_id#.ajax.php",
         data: {
             action: "getAll"
         },
@@ -103,7 +103,7 @@ function updateDisplayPlugin(_callback) {
                 htmlContainer += '<div class="eqLogicDisplayCard cursor" data-eqLogic_id="' + eqLogics[i].id + '" style="background-color : #ffffff; height : 200px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >';
                 htmlContainer += "<center>";
                 // lien vers l'image de votre icone
-                htmlContainer += '<img src="plugins/weather/doc/images/weather_icon.png" height="105" width="95" />';
+                htmlContainer += '<img src="plugins/#plugin_id#/doc/images/#plugin_id#_icon.png" height="105" width="95" />';
                 htmlContainer += "</center>";
                 // Nom de votre équipement au format human
                 htmlContainer += '<span style="font-size : 1.1em;position:relative; top : 15px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;"><center>' + eqLogics[i].humanContainer + '</center></span>';
