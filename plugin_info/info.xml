@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info>
-    <id>template</id>
-    <name>Template</name>
-    <description>Plugin template pour la création de plugin</description>
-    <icon>fa fa-keyboard-o</icon>
+    <id>#plugin_id#</id>
+    <name>#plugin_name#</name>
+    <description>#plugin_description#</description>
+    <icon>#plugin_icon#</icon>
     <licence>AGPL</licence>
-    <author>Loïc Gevrey</author>
-    <installation>Aucune</installation>
-    <require>1.136</require>
-    <category>programming</category>
+    <author>#plugin_author#</author>
+    <installation>#plugin_installation#</installation>
+    <require>#plugin_core_require#</require>
+    <category>#plugin_category#</category>
 </info>
 
